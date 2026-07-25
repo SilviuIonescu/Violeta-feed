@@ -1,0 +1,46 @@
+name: Import exact Violeta build
+
+on:
+  push:
+    paths:
+      - '.github/workflows/import-exact-build.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Download agreed build
+        run: |
+          curl -L --fail --retry 3 \
+            'https://drive.usercontent.google.com/download?id=1V7b5D98uH7D2c2ZOWEE19tRU-NS8iP4R&export=download&confirm=t' \
+            -o /tmp/violeta.zip
+          rm -rf /tmp/violeta-build
+          mkdir -p /tmp/violeta-build
+          unzip -o /tmp/violeta.zip -d /tmp/violeta-build
+
+      - name: Replace website with agreed version
+        run: |
+          rm -rf assets
+          cp /tmp/violeta-build/index.html ./index.html
+          cp /tmp/violeta-build/app.js ./app.js
+          cp /tmp/violeta-build/styles.css ./styles.css
+          cp -R /tmp/violeta-build/assets ./assets
+
+      - name: Commit imported build
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html app.js styles.css assets
+          if git diff --cached --quiet; then
+            echo 'No changes to commit.'
+          else
+            git commit -m 'Restore agreed Violeta build 1:1 [skip ci]'
+            git push
+          fi
