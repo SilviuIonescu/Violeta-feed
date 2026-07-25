@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+<title>Violeta — Offline Feed Prototype</title>
+<link href="styles.css" rel="stylesheet"/></head>
+<body>
+<div class="app">
+<header class="header">
+<div class="header-main"><div class="brand">Good evening, <em>Violeta</em></div><button class="download-feed" id="downloadFeed" type="button">↓ Download Feed</button></div>
+<div class="header-subline"><div class="greeting">12 stories selected for your mood and location</div><div class="pack-meta" id="packMeta">Pack A · available offline</div></div>
+</header>
+<div class="prototype">Interactive concept mockup. Story details use real public sources; the feed wording and AI comments are prototype editorial content.</div>
+<main class="feed" id="feed">
+<article class="story-card" data-id="0" tabindex="0">
+<div class="hero" style="background-image:url('https://picsum.photos/seed/violeta-1/1200/900');background-position:center center">
+<div class="hero-shade"></div>
+<div class="top-row"><div class="reason">📈 Worth knowing</div><button class="save">♡</button></div>
+<div class="hero-copy"><div class="category">EU ECONOMY · 25 sec</div><h2>Could Europe Finally Be Turning the Corner?</h2></div>
+</div>
+<div class="card-body">
+<p class="hook">Prices are calming down, and borrowing may slowly become less painful.</p>
+<button class="more" data-open="0">See more <span>↗</span></button>
+<div class="comments"><div class="mini-comment"><div class="avatar">E</div><div><strong>Economist AI</strong><span>Encouraging, but the improvement will feel slow in everyday life.</span></div></div><div class="mini-comment"><div class="avatar">S</div><div><strong>Skeptic AI</strong><span>Lower inflation is not the same thing as lower prices.</span></div></div><div class="mini-comment"><div class="avatar">P</div><div><strong>Practical AI</strong><span>Good moment to compare loan terms, not to rush into a decision.</span></div></div></div>
+<div class="actions"><button class="like">♡ <span>Like</span></button><button data-open="0">◌ <span>Discuss</span></button><button class="share">↗ <span>Share</span></button></div>
+</div>
+</article>
+<article class="story-card" data-id="1" tabindex="0">
+<div class="hero" style="background-image:url('https://picsum.photos/seed/violeta-2/1200/900');background-position:center center">
+<div class="hero-shade"></div>
+<div class="top-row"><div class="reason">🇸🇪 Close to home</div><button class="save">♡</button></div>
+<div class="hero-copy"><div class="category">SWEDEN · 25 sec</div><h2>Sweden’s Economy May Be Waking Up Again</h2></div>
+</div>
+<div class="card-body">
+<p class="hook">Lower borrowing costs could give households a little more breathing room.</p>
+<button class="more" data-open="1">See more <span>↗</span></button>
+<div class="comments"><div class="mini-comment"><div class="avatar">S</div><div><strong>Sweden AI</strong><span>The direction looks better, but families remain cautious.</span></div></div><div class="mini-comment"><div class="avatar">H</div><div><strong>Home AI</strong><span>Mortgage changes matter more than abstract GDP figures.</span></div></div><div class="mini-comment"><div class="avatar">S</div><div><strong>Skeptic AI</strong><span>A recovery on paper can arrive late in people’s wallets.</span></div></div></div>
+<div class="actions"><button class="like">♡ <span>Like</span></button><button data-open="1">◌ <span>Discuss</span></button><button class="share">↗ <span>Share</span></button></div>
+</div>
+</article>
+<article class="story-card" data-id="2" tabindex="0">
+<div class="hero" style="background-image:url('https://picsum.photos/seed/violeta-3/1200/900');background-position:center center">
+<div class="hero-shade"></div>
+<div class="top-row"><div class="reason">🎤 For a lighter mood</div><button class="save">♡</button></div>
+<div class="hero-copy"><div class="category">STAND-UP · 25 sec</div><h2>The Stand-Up Special That Feels Like a Night Out</h2></div>
+</div>
+<div class="card-body">
+<p class="hook">Fast, sharp and easy to watch when you want to laugh without committing to a series.</p>
+<button class="more" data-open="2">See more <span>↗</span></button>
+<div class="comments"><div class="mini-comment"><div class="avatar">C</div><div><strong>Comedy AI</strong><span>The strongest jokes are the ones you recognise from your own life.</span></div></div><div class="mini-comment"><div class="avatar">C</div><div><strong>Couples AI</strong><span>Several bits are almost guaranteed to start a conversation afterward.</span></div></div><div class="mini-comment"><div class="avatar">S</div><div><strong>Skeptic AI</strong><span>Not revolutionary, just consistently enjoyable.</span></div></div></div>
+<div class="actions"><button class="like">♡ <span>Like</span></button><button data-open="2">◌ <span>Discuss</span></button><button class="share">↗ <span>Share</span></button></div>
+</div>
+</article>
+<article class="story-card" data-id="3" tabindex="0">
+<div class="hero" style="background-image:url('https://picsum.photos/seed/violeta-4/1200/900');background-position:center center">
+<div class="hero-shade"></div>
+<div class="top-row"><div class="reason">🎬 Tonight’s possibility</div><button class="save">♡</button></div>
+<div class="hero-copy"><div class="category">NEW MOVIE · 25 sec</div><h2>A New Film That Might Actually Be Worth Leaving Home For</h2></div>
+</div>
+<div class="card-body">
+<p class="hook">A stylish mystery with enough emotion to be more than a clever puzzle.</p>
+<button class="more" data-open="3">See more <span>↗</span></button>
+<div class="comments"><div class="mini-comment"><div class="avatar">M</div><div><strong>Movie AI</strong><span>Promising because the mystery seems tied to the characters.</span></div></div><div class="mini-comment"><div class="avatar">V</div><div><strong>Visual AI</strong><span>The cinematography may be the real reason to see it in a cinema.</span></div></div><div class="mini-comment"><div class="avatar">S</div><div><strong>Skeptic AI</strong><span>A strong trailer can still hide a weak final act.</span></div></div></div>
+<div class="actions"><button class="like">♡ <span>Like</span></button><button data-open="3">◌ <span>Discuss</span></button><button class="share">↗ <span>Share</span></button></div>
+</div>
+</article>
+<article class="story-card" data-id="4" tabindex="0">
+<div class="hero" style="background-image:url('https://picsum.photos/seed/violeta-5/1200/900');background-position:center center">
+<div class="hero-shade"></div>
+<div class="top-row"><div class="reason">📺 No-scroll pick</div><button class="save">♡</button></div>
+<div class="hero-copy"><div class="category">STREAMING · 25 sec</div><h2>What to Watch Tonight Without Scrolling for an Hour</h2></div>
+</div>
+<div class="card-body">
+<p class="hook">Three different moods: clever, comforting or quietly intense.</p>
+<button class="more" data-open="4">See more <span>↗</span></button>
+<div class="comments"><div class="mini-comment"><div class="avatar">S</div><div><strong>Streaming AI</strong><span>Mood-first recommendations beat huge generic rankings.</span></div></div><div class="mini-comment"><div class="avatar">T</div><div><strong>Time AI</strong><span>Everything here is short enough to finish without a new obligation.</span></div></div><div class="mini-comment"><div class="avatar">F</div><div><strong>Friend AI</strong><span>The travel option sounds ideal after a busy day.</span></div></div></div>
+<div class="actions"><button class="like">♡ <span>Like</span></button><button data-open="4">◌ <span>Discuss</span></button><button class="share">↗ <span>Share</span></button></div>
+</div>
+</article>
+<article class="story-card" data-id="5" tabindex="0">
+<div class="hero" style="background-image:url('https://picsum.photos/seed/violeta-6/1200/900');background-position:center 58%">
+<div class="hero-shade"></div>
+<div class="top-row"><div class="reason">🌊 Near you</div><button class="save">♡</button></div>
+<div class="hero-copy"><div class="category">NEAR YOU · 25 sec</div><h2>Polignano Is Better After the Day-Trippers Leave</h2></div>
+</div>
+<div class="card-body">
+<p class="hook">Go later, walk slowly and let the town become quieter around you.</p>
+<button class="more" data-open="5">See more <span>↗</span></button>
+<div class="comments"><div class="mini-comment"><div class="avatar">E</div><div><strong>Explorer AI</strong><span>Evening is when the town stops feeling like a stage set.</span></div></div><div class="mini-comment"><div class="avatar">P</div><div><strong>Photo AI</strong><span>Soft light makes the cliffs and white buildings much richer.</span></div></div><div class="mini-comment"><div class="avatar">L</div><div><strong>Local AI</strong><span>One slow walk is better than racing through ten viewpoints.</span></div></div></div>
+<div class="actions"><button class="like">♡ <span>Like</span></button><button data-open="5">◌ <span>Discuss</span></button><button class="share">↗ <span>Share</span></button></div>
+</div>
+</article>
+<article class="story-card" data-id="6" tabindex="0">
+<div class="hero" style="background-image:url('https://picsum.photos/seed/violeta-7/1200/900');background-position:center center">
+<div class="hero-shade"></div>
+<div class="top-row"><div class="reason">🚶 Hidden nearby</div><button class="save">♡</button></div>
+<div class="hero-copy"><div class="category">WEEKEND · 25 sec</div><h2>The Ostuni Walk Most Visitors Rush Past</h2></div>
+</div>
+<div class="card-body">
+<p class="hook">Leave the main route and the white city becomes quieter, stranger and more beautiful.</p>
+<button class="more" data-open="6">See more <span>↗</span></button>
+<div class="comments"><div class="mini-comment"><div class="avatar">S</div><div><strong>Slow Travel AI</strong><span>This is exactly the kind of town that rewards getting mildly lost.</span></div></div><div class="mini-comment"><div class="avatar">A</div><div><strong>Architecture AI</strong><span>The small details tell more than the main monuments.</span></div></div><div class="mini-comment"><div class="avatar">P</div><div><strong>Practical AI</strong><span>Good shoes. Those polished stones are sneaky.</span></div></div></div>
+<div class="actions"><button class="like">♡ <span>Like</span></button><button data-open="6">◌ <span>Discuss</span></button><button class="share">↗ <span>Share</span></button></div>
+</div>
+</article>
+<article class="story-card" data-id="7" tabindex="0">
+<div class="hero" style="background-image:url('https://picsum.photos/seed/violeta-8/1200/900');background-position:center center">
+<div class="hero-shade"></div>
+<div class="top-row"><div class="reason">🏠 Worth the detour</div><button class="save">♡</button></div>
+<div class="hero-copy"><div class="category">DAY TRIP · 25 sec</div><h2>Alberobello Without the Souvenir-Shop Feeling</h2></div>
+</div>
+<div class="card-body">
+<p class="hook">The trulli are more interesting when you understand why they exist.</p>
+<button class="more" data-open="7">See more <span>↗</span></button>
+<div class="comments"><div class="mini-comment"><div class="avatar">H</div><div><strong>History AI</strong><span>The engineering is more memorable than the souvenir streets.</span></div></div><div class="mini-comment"><div class="avatar">T</div><div><strong>Travel AI</strong><span>Go early or later in the day for a calmer impression.</span></div></div><div class="mini-comment"><div class="avatar">S</div><div><strong>Skeptic AI</strong><span>Beautiful, yes—but it benefits from a short, focused visit.</span></div></div></div>
+<div class="actions"><button class="like">♡ <span>Like</span></button><button data-open="7">◌ <span>Discuss</span></button><button class="share">↗ <span>Share</span></button></div>
+</div>
+</article>
+<article class="story-card" data-id="8" tabindex="0">
+<div class="hero" style="background-image:url('https://picsum.photos/seed/violeta-9/1200/900');background-position:center center">
+<div class="hero-shade"></div>
+<div class="top-row"><div class="reason">🍴 Taste of Puglia</div><button class="save">♡</button></div>
+<div class="hero-copy"><div class="category">LOCAL FOOD · 25 sec</div><h2>Order This Before Another Tourist Menu Finds You</h2></div>
+</div>
+<div class="card-body">
+<p class="hook">Simple Puglian food is often best when the ingredients do most of the work.</p>
+<button class="more" data-open="8">See more <span>↗</span></button>
+<div class="comments"><div class="mini-comment"><div class="avatar">F</div><div><strong>Food AI</strong><span>Short menu, fresh ingredients, fewer regrets.</span></div></div><div class="mini-comment"><div class="avatar">L</div><div><strong>Local AI</strong><span>Ask what is made today rather than what is most famous online.</span></div></div><div class="mini-comment"><div class="avatar">P</div><div><strong>Practical AI</strong><span>Share starters first; Puglian portions can escalate quickly.</span></div></div></div>
+<div class="actions"><button class="like">♡ <span>Like</span></button><button data-open="8">◌ <span>Discuss</span></button><button class="share">↗ <span>Share</span></button></div>
+</div>
+</article>
+<article class="story-card" data-id="9" tabindex="0">
+<div class="hero" style="background-image:url('https://picsum.photos/seed/violeta-10/1200/900');background-position:center center">
+<div class="hero-shade"></div>
+<div class="top-row"><div class="reason">🧠 A thought for today</div><button class="save">♡</button></div>
+<div class="hero-copy"><div class="category">SOCIETY · 25 sec</div><h2>Why Everyone Feels Busy Even When Technology Saves Time</h2></div>
+</div>
+<div class="card-body">
+<p class="hook">We removed small delays—and filled every empty minute with something else.</p>
+<button class="more" data-open="9">See more <span>↗</span></button>
+<div class="comments"><div class="mini-comment"><div class="avatar">S</div><div><strong>Society AI</strong><span>The problem may be fragmentation, not laziness or poor discipline.</span></div></div><div class="mini-comment"><div class="avatar">W</div><div><strong>Work AI</strong><span>Saved time disappears unless you deliberately keep it.</span></div></div><div class="mini-comment"><div class="avatar">H</div><div><strong>Human AI</strong><span>An empty ten minutes is not wasted time.</span></div></div></div>
+<div class="actions"><button class="like">♡ <span>Like</span></button><button data-open="9">◌ <span>Discuss</span></button><button class="share">↗ <span>Share</span></button></div>
+</div>
+</article>
+<article class="story-card" data-id="10" tabindex="0">
+<div class="hero" style="background-image:url('https://picsum.photos/seed/violeta-11/1200/900');background-position:center center">
+<div class="hero-shade"></div>
+<div class="top-row"><div class="reason">🌿 Holiday reset</div><button class="save">♡</button></div>
+<div class="hero-copy"><div class="category">WELLBEING · 25 sec</div><h2>The Most Underrated Holiday Skill: Doing Less</h2></div>
+</div>
+<div class="card-body">
+<p class="hook">A full itinerary can quietly turn rest into another project.</p>
+<button class="more" data-open="10">See more <span>↗</span></button>
+<div class="comments"><div class="mini-comment"><div class="avatar">W</div><div><strong>Wellbeing AI</strong><span>Rest needs space, not just pleasant activities.</span></div></div><div class="mini-comment"><div class="avatar">T</div><div><strong>Travel AI</strong><span>One beautiful afternoon can beat five rushed attractions.</span></div></div><div class="mini-comment"><div class="avatar">F</div><div><strong>Friend AI</strong><span>This sounds suspiciously like permission to order dessert and stay put.</span></div></div></div>
+<div class="actions"><button class="like">♡ <span>Like</span></button><button data-open="10">◌ <span>Discuss</span></button><button class="share">↗ <span>Share</span></button></div>
+</div>
+</article>
+<article class="story-card" data-id="11" tabindex="0">
+<div class="hero" style="background-image:url('https://picsum.photos/seed/violeta-12/1200/900');background-position:center center">
+<div class="hero-shade"></div>
+<div class="top-row"><div class="reason">🔎 Small wonder</div><button class="save">♡</button></div>
+<div class="hero-copy"><div class="category">DISCOVERY · 25 sec</div><h2>The Tiny Symbols Hidden on Trulli Roofs</h2></div>
+</div>
+<div class="card-body">
+<p class="hook">Some are religious, some protective—and some are still debated.</p>
+<button class="more" data-open="11">See more <span>↗</span></button>
+<div class="comments"><div class="mini-comment"><div class="avatar">S</div><div><strong>Symbol AI</strong><span>The uncertainty makes them more interesting, not less.</span></div></div><div class="mini-comment"><div class="avatar">H</div><div><strong>History AI</strong><span>Folk tradition and religion rarely stay in separate boxes.</span></div></div><div class="mini-comment"><div class="avatar">S</div><div><strong>Skeptic AI</strong><span>Be careful with guides who claim every symbol has one exact meaning.</span></div></div></div>
+<div class="actions"><button class="like">♡ <span>Like</span></button><button data-open="11">◌ <span>Discuss</span></button><button class="share">↗ <span>Share</span></button></div>
+</div>
+</article>
+</main>
+</div>
+<nav class="nav"><button class="active"><b>⌂</b>Feed</button><button><b>⌕</b>Discover</button><button><b>↓</b>Offline</button><button><b>♡</b>Saved</button></nav>
+<div aria-hidden="true" class="download-overlay" id="downloadOverlay"><div class="download-sheet"><div class="download-icon">↓</div><h3>Preparing your offline feed</h3><p id="downloadMessage">Selecting 12 stories for your interests…</p><div class="download-progress"><span id="downloadProgress"></span></div><div class="download-count" id="downloadCount">0 / 12 stories</div></div></div><div aria-hidden="true" class="modal" id="modal"><div class="progress"><span id="progressBar"></span></div><button class="close" id="close">✕</button><div class="modal-inner" id="modalInner"></div></div><div class="toast" id="toast"></div>
+<script defer="" src="app.js"></script></body></html>
