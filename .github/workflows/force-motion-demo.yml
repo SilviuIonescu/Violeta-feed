@@ -1,0 +1,43 @@
+name: Force motion in demo
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Ignore iPhone Reduce Motion for this prototype
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('styles.css')
+          s = p.read_text()
+          start = s.find('@media(prefers-reduced-motion:reduce)')
+          if start != -1:
+              depth = 0
+              end = None
+              for i in range(start, len(s)):
+                  if s[i] == '{': depth += 1
+                  elif s[i] == '}':
+                      depth -= 1
+                      if depth == 0:
+                          end = i + 1
+                          break
+              if end:
+                  s = s[:start] + '/* Demo mode: intentionally ignores prefers-reduced-motion so Living Frames remain visible. */\n' + s[end:]
+                  p.write_text(s)
+          PY
+      - name: Commit patch
+        run: |
+          if git diff --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add styles.css
+          git commit -m "Force Living Frames motion in demo [skip ci]"
+          git push
